@@ -8,6 +8,7 @@ A modern, type-safe React application for browsing and exploring Pokémon data. 
 - **TypeScript** - Type safety
 - **Vite** - Build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
+- **React Query** - Data fetching and caching
 - **React Router DOM** - Client-side routing
 - **Axios** - HTTP client
 - **Vitest** - Testing framework
@@ -34,6 +35,7 @@ src/
 └── ui/                      # Presentation layer
     ├── components/          # Reusable UI components
     ├── pages/              # Page components
+    ├── hooks/              # Custom React hooks
     ├── router/             # Routing configuration
     └── constants/          # UI constants (colors, etc.)
 ```
