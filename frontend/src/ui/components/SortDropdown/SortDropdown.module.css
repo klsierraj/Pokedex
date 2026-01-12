@@ -1,0 +1,25 @@
+.card {
+    position: absolute;  
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-2dp);
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font: var(--font-body2);
+    color: var(--gray-dark);
+  }
+  
+  .label {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  

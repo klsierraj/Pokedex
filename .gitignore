@@ -1,0 +1,49 @@
+g# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Git subdirectories (prevent nested repos)
+*/.git/
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+vendor/bundle
+vendor/cache
+
+# Build outputs
+dist/
+build/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database
+*.sqlite3
+*.db
+
+# Rails
+*.pid
+*.sock
+tmp/
+log/*.log
+storage/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+.cache/

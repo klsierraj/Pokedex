@@ -1,0 +1,48 @@
+:root {
+
+    --color-primary: #DC0A2D;
+  
+    --type-bug: #A7B723;
+    --type-dark: #755744;
+    --type-dragon: #7037FF;
+    --type-electric: #F9CF30;
+    --type-fairy: #F4BDC9;
+    --type-fighting: #C12239;
+    --type-fire: #F57D31;
+    --type-flying: #A891EC;
+    --type-ghost: #7059B8;
+    --type-normal: #AAA67F;
+    --type-grass: #74CB48;
+    --type-ground: #DEC16B;
+    --type-ice: #9AD6DF;
+    --type-poison: #A43E9E;
+    --type-psychic: #FB5584;
+    --type-rock: #B69E31;
+    --type-steel: #B7B9D0;
+    --type-water: #6493EB;
+  
+    --gray-dark: #212121;
+    --gray-medium: #666666;
+    --gray-light: #E0E0E0;
+    --gray-background: #EFEFEF;
+    --white: #FFFFFF;
+  
+    --font-headline: 24px/32px "Inter", sans-serif;
+    --font-subtitle3: 10px/16px "Inter", sans-serif;
+    --font-subtitle1: 14px/16px "Inter", sans-serif;
+    --font-subtitle2: 12px/16px "Inter", sans-serif;
+  
+    --font-body3: 10px/16px "Inter", sans-serif;
+    --font-body1: 14px/16px "Inter", sans-serif;
+    --font-body2: 12px/16px "Inter", sans-serif;
+    --font-caption: 8px/12px "Inter", sans-serif;
+  
+    --shadow-2dp: 0px 1px 2px rgba(0,0,0,0.2);
+    --shadow-6dp: 0px 3px 6px rgba(0,0,0,0.3);
+    --inner-shadow-2dp: inset 0px 1px 2px rgba(0,0,0,0.2);
+  
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+  }
+  

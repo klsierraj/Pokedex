@@ -1,0 +1,12 @@
+.appbar {
+    background-color: var(--color-primary);
+    color: var(--white);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font: var(--font-headline);
+  }
+  

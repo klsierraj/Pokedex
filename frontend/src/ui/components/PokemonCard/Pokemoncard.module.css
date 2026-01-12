@@ -1,0 +1,25 @@
+.card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-2dp);
+    padding: 8px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .image {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+  
+  .number {
+    font: var(--font-caption);
+    color: var(--gray-medium);
+  }
+  
+  .name {
+    font: var(--font-body2);
+    color: var(--gray-dark);
+    text-transform: capitalize;
+  }
