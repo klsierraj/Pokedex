@@ -20,7 +20,7 @@ export function PokemonsPage() {
   const [showSort, setShowSort] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  // Fetch desde el backend con paginación
+ 
   useEffect(() => {
     setLoading(true);
     const useCase = makeListPokemonsUseCase();
@@ -35,7 +35,6 @@ export function PokemonsPage() {
       .finally(() => setLoading(false));
   }, [currentPage]);
 
-  // Filtro + orden (solo en los pokemons cargados)
   const filtered = pokemons
     .filter((p) => p.name.toLowerCase().includes(search.toLowerCase()))
     .sort((a, b) =>

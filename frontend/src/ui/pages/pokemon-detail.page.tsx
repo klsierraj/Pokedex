@@ -1,7 +1,5 @@
-import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { makeGetPokemonDetailUseCase } from "../../infra/factories/pokemon.factory";
-import type { PokemonDetail } from "../../core/domain/models/pokemon-detail";
+import { usePokemonDetail } from "../hooks/use-pokemon-detail";
 import { getPokemonTypeColor } from "../constants/pokemon-type-colors";
 
 function capitalizeFirst(str: string): string {
@@ -23,26 +21,7 @@ function formatStatName(stat: string): string {
 export function PokemonDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [pokemon, setPokemon] = useState<PokemonDetail | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!id) {
-      setError("Pokemon ID is required");
-      setLoading(false);
-      return;
-    }
-
-    const useCase = makeGetPokemonDetailUseCase();
-    useCase
-      .execute(Number(id))
-      .then(setPokemon)
-      .catch((err) => {
-        setError(err.message || "Failed to load pokemon");
-      })
-      .finally(() => setLoading(false));
-  }, [id]);
+  const { data: pokemon, isLoading: loading, error } = usePokemonDetail(Number(id || 0));
 
   if (loading) {
     return (
@@ -58,7 +37,7 @@ export function PokemonDetailPage() {
     return (
       <div className="flex flex-col min-h-screen bg-gray-background">
         <div className="flex-1 flex items-center justify-center">
-          <div className="text-gray-medium">{error || "Pokemon not found"}</div>
+          <div className="text-gray-medium">{error?.message || "Pokemon not found"}</div>
         </div>
       </div>
     );
