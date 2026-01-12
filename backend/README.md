@@ -1,24 +1,79 @@
-# README
+# Pokedex Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails API backend for the Pokedex application. Provides authentication and Pokemon data by integrating with PokeAPI.
 
-Things you may want to cover:
+## 🚀 Tech Stack
 
-* Ruby version
+- **Rails 8.1.1** - Ruby web framework
+- **Ruby** - Programming language
+- **SQLite3** - Database
+- **JWT** - Authentication tokens
+- **HTTParty** - HTTP client for PokeAPI integration
+- **Puma** - Web server
+- **RSpec** - Testing framework
 
-* System dependencies
+## 📋 API Endpoints
 
-* Configuration
+### Authentication
+- `POST /api/v1/login` - User authentication (returns JWT token)
 
-* Database creation
+### Pokemon (requires authentication)
+- `GET /api/v1/pokemons` - List Pokemon with pagination (`?page=1&limit=20`)
+- `GET /api/v1/pokemons/:id` - Get Pokemon details
+- `GET /api/v1/pokemons/search?name=:name` - Search Pokemon by name
 
-* Database initialization
+## 🛠️ Getting Started
 
-* How to run the test suite
+### Prerequisites
 
-* Services (job queues, cache servers, search engines, etc.)
+- Ruby 3.3+
+- Bundler
 
-* Deployment instructions
+### Installation
 
-* ...
+```bash
+# Install dependencies
+bundle install
+
+# Setup database
+rails db:create db:migrate
+
+# Seed database (if needed)
+rails db:seed
+```
+
+### Development
+
+```bash
+# Start server
+bin/dev
+
+# Server runs on http://localhost:3000
+```
+
+### Testing
+
+```bash
+# Run tests
+bundle exec rspec
+```
+
+## 🔐 Authentication
+
+All Pokemon endpoints require a JWT token in the Authorization header:
+
+```
+Authorization: Bearer <token>
+```
+
+Get a token by logging in with:
+- Username: `admin`
+- Password: `admin`
+
+## 📦 Features
+
+- JWT-based authentication
+- Integration with PokeAPI
+- CORS enabled for frontend
+- Pagination support
+- Error handling
