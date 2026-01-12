@@ -1,10 +1,8 @@
-# ✅ README — GenAI Scaffold Section (NestJS + Tradeoffs)
-
-🧠 **Generative AI Coding Exercise — Task Management API (NestJS)**
+**Generative AI Coding Exercise — Task Management API (NestJS)**
 
 This section documents the required Generative AI exercise for the technical interview.
 
-## 1. 📌 Prompt Used
+## 1. Prompt Used
 
 Generate a NestJS backend scaffold for a simple Task Management REST API using TypeORM with PostgreSQL. The API is public for now (no authentication), but code should be structured so access control can be added later.
 
@@ -27,7 +25,7 @@ Generate a NestJS backend scaffold for a simple Task Management REST API using T
 - Do not generate bootstrapping code or config files
 - Output only relevant backend code.
 
-## 2. 📦 AI Output (Representative Sample)
+## 2.  AI Output (Representative Sample)
 
 Below are key generated files (excerpted for brevity).
 
@@ -118,7 +116,7 @@ This matches the intended tradeoffs.
 | **Security** | Endpoints open | Guards can be added later using JWT/Passport |
 | **Dates** | Uses date | Could use timestamptz for multi-region correctness |
 
-### 🧩 Edge Cases Considered
+###  Edge Cases Considered
 
 The output + review surfaced edge cases such as:
 - Invalid userId references
@@ -126,7 +124,7 @@ The output + review surfaced edge cases such as:
 - ISO date formats vs. timezone correctness
 - Overfetching tasks (ownership filtering not applied yet)
 
-### 🔐 Security Considerations (Deferred by Design)
+###  Security Considerations (Deferred by Design)
 
 For now endpoints are public, BUT code has TODO markers where future security plugs in:
 
